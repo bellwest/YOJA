@@ -1,0 +1,187 @@
+<header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1 id="homeHeading">굶지 말고, 요리 하자.</h1>
+                <hr>
+                <p>일단 냉장고부터 열어볼래? 밥이랑 김치밖에 없다고? 그게 어디야.</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">재료 입력하기</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">쓸만한 재료 아무거나 골라봐!</h2>
+                    <p class="text-faded">뭐든 상관없어. 세 개 정도만 골라도 돼.</p>
+                    <hr class="light">
+                </div>
+            </div>
+        </div>
+	
+        <div class="container">
+			<%= form_for "ings", url: welcome_index_path, method: 'get' do |f| %>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/rice.jpg" class="img-ingrs" />
+                        <h3>밥</h3>
+        				<fieldset>
+							<label for="checkbox-ric" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">밥</label>
+							<input type="checkbox" name="ings[ric]" id="checkbox-ric" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+					</div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/meat.jpg" class="img-ingrs" />
+                        <h3>고기</h3>
+						<fieldset>
+							<label for="checkbox-por" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">돼지고기</label>
+							<input type="checkbox" name="checkbox-por" id="checkbox-por" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-chi" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">닭고기</label>
+							<input type="checkbox" name="checkbox-chi" id="checkbox-chi" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-bee" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">소고기</label>
+							<input type="checkbox" name="checkbox-bee" id="checkbox-bee" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/milk.jpg" class="img-ingrs" />
+                        <h3>유제품/계란</h3>
+						<fieldset>
+							<label for="checkbox-mil" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">우유</label>
+							<input type="checkbox" name="checkbox-mil" id="checkbox-mil" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-che" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">치즈</label>
+							<input type="checkbox" name="checkbox-che" id="checkbox-che" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-egg" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">계란</label>
+							<input type="checkbox" name="checkbox-egg" id="checkbox-egg" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/vegetable.jpg" class="img-ingrs" />
+                        <h3>야채</h3>
+						<fieldset>
+							<label for="checkbox-oni" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">양파</label>
+							<input type="checkbox" name="checkbox-oni" id="checkbox-oni" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-lee" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">대파</label>
+							<input type="checkbox" name="checkbox-lee" id="checkbox-lee" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-gar" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">마늘</label>
+							<input type="checkbox" name="checkbox-gar" id="checkbox-gar" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-pep" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">고추</label>
+							<input type="checkbox" name="checkbox-pep" id="checkbox-pep" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/sauce.jpg" class="img-ingrs" />
+                        <h3>장</h3>
+						<fieldset>
+							<label for="checkbox-mis" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">된장</label>
+							<input type="checkbox" name="checkbox-mis" id="checkbox-mis" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-soy" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">간장</label>
+							<input type="checkbox" name="checkbox-soy" id="checkbox-soy" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/kimchi.jpg" class="img-ingrs" />
+                        <h3>김치</h3>
+						<fieldset>
+							<label for="checkbox-kim" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">김치</label>
+							<input type="checkbox" name="checkbox-kim" id="checkbox-kim" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/msg.jpg" class="img-ingrs" />
+                        <h3>맛내기</h3>
+						<fieldset>
+							<label for="checkbox-anc" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">멸치</label>
+							<input type="checkbox" name="checkbox-anc" id="checkbox-anc" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-kel" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">다시마</label>
+							<input type="checkbox" name="checkbox-kel" id="checkbox-kel" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <img src="https://bellwest.github.io/img/noodle.jpg" class="img-ingrs" />
+                        <h3>기타</h3>
+						<fieldset>
+							<label for="checkbox-noo" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">면</label>
+							<input type="checkbox" name="checkbox-noo" id="checkbox-noo" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-tof" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">두부</label>
+							<input type="checkbox" name="checkbox-tof" id="checkbox-tof" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-pot" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">감자</label>
+							<input type="checkbox" name="checkbox-pot" id="checkbox-pot" class="ui-checkboxradio ui-helper-hidden-accessible">
+							<label for="checkbox-swe" class="ui-checkboxradio-label ui-corner-all ui-button ui-widget">고구마</label>
+							<input type="checkbox" name="checkbox-swe" id="checkbox-swe" class="ui-checkboxradio ui-helper-hidden-accessible">
+						</fieldset>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    
+                </div>
+            </div>
+			
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <p class="text-faded">다 골랐어?</p>
+					<%= f.submit "레시피 추천받기", class: "page-scroll btn btn-default btn-xl sr-button" %>
+                </div>
+            </div>
+			<% end %>
+
+        </div>
+
+    </section>
+
+	<section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">고객문의</h2>
+                    <hr class="primary">
+                    <p>YOJA가 더 나아질 수 있도록 도와줘.<br>새로운 의견, 불평불만은 언제든 환영이야!</p>
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <i class="fa fa-phone fa-3x sr-contact"></i>
+                    <p>+82-10-1234-5678</p>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fa fa-envelope-o fa-3x sr-contact"></i>
+                    <p><a href="mailto:your-email@your-domain.com">feedback@yoja.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<script>
+		var count;
+		var[] ings;
+		
+		function click(id) {
+			if ings.have(id) {
+				ings.del(id);
+				count--;
+			}
+			else if (count == 5) alert("재료는 5개까지만 고를 수 있어요.");
+			else {
+				ings.add(id);
+				count++;
+			}
+		}
+	</script>
